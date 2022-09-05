@@ -2,21 +2,26 @@
 
 namespace application\controllers;
 use application\core\Controller;
-use application\lib\Db;
+
 
 class MainController extends Controller {
 
     public function indexAction() {
 
-        $db = new Db;
+        $result = $this->model->getNews();
+        $vars = [
+            'users' => $result,
+        ];
+        $this->view->render('Главная страница', $vars); 
 
-        $form = 2;
+    }
 
-        $data = $db->row("SELECT first_name FROM users");
-        debug($data);
+    public function aboutAction() 
+    {
 
-        $this->view->render('Главная страница'); 
+        $this->view->render('Страница О нас');
 
     }
 
 }
+
