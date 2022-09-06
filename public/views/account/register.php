@@ -16,7 +16,7 @@
 				</div>
 				<div class="col-md-6 animate-box">
 					<h3>Регистрация</h3>
-					<form action="#">
+					<form action="/account/register" method="POST">
 						<div class="row form-group">
 							<div class="col-md-6">
 								<!-- <label for="fname">First Name</label> -->
@@ -56,34 +56,26 @@
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Email">
+								<input type="email" id="email" name="email" class="form-control" placeholder="Email">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="email">Email</label> -->
-								<input type="text" id="phone" class="form-control" placeholder="Телефон">
+								<input type="text" id="phone" name="phone" class="form-control" placeholder="Телефон">
 							</div>
 						</div>
 
 						<div class="row form-group">
-
 							<div class="col-md-12">
-								<select name="age" id="age" class="form-control">
-									<?php
-										// for($i = 10; $i <= 100; $i++) {
-									?>
-									<option value=""></option>
-									<?php
-										// }
-									?>
-								</select>
+								<!-- <label for="email">Email</label> -->
+								<input type="password" id="password" name="password" class="form-control" placeholder="Пароль">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
+							<input type="submit" value="Регистрация" class="btn btn-primary">
 						</div>
 
 					</form>		
