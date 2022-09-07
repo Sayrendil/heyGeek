@@ -3,13 +3,14 @@
 return [
     'all' => [
         'login',
-        'register'
+        'register',
+        'confirm'
     ],
     'student' => [
-        'recovery'
+        'confirm'
     ],
     'teacher' => [
-        'recovery'
+        'confirm'
     ],
     'admin' => [
         //

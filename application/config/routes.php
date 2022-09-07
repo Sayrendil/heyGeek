@@ -23,9 +23,9 @@ return [
         'controller' => 'account',
         'action' => 'register'
     ],
-    'account/recovery' => [
+    'account/confirm/{token:\w+}' => [
         'controller' => 'account',
-        'action' => 'recovery'
+        'action' => 'confirm'
     ],
     // NewsController Для страниц новостей
     'news/show' => [

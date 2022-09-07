@@ -8,11 +8,8 @@ class MainController extends Controller {
 
     public function indexAction() {
 
-        $result = $this->model->getNews();
-        $vars = [
-            'users' => $result,
-        ];
-        $this->view->render('Главная страница', $vars); 
+        
+        $this->view->render('Главная страница'); 
 
     }
 

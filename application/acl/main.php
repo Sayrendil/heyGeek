@@ -3,7 +3,8 @@
 return [
     'all' => [
         'index',
-        'about'
+        'about',
+        'confirm'
     ],
     'student' => [
         //

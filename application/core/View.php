@@ -21,12 +21,12 @@ class View {
     {   
 
         // extract($vars);
-        $path = 'public/views/' . $this->path . '.php';
+        $path = 'application/views/' . $this->path . '.php';
         if(file_exists($path)) {
             ob_start();
             require $path;
             $content = ob_get_clean();
-            require 'public/views/layouts/' . $this->layout . '.php';
+            require 'application/views/layouts/' . $this->layout . '.php';
         } else {
             echo "Вид не найден: " . $this->path;
         }
@@ -36,7 +36,7 @@ class View {
     public function redirect($url) 
     {
 
-        header("Location: " . $url);
+        header("Location: /" . $url);
         exit;
 
     }
@@ -45,7 +45,7 @@ class View {
     {
         
         http_response_code($code);
-        $path = 'public/views/errors/' . $code . '.php';
+        $path = 'application/views/errors/' . $code . '.php';
         if(file_exists($path)) {
             require $path;
         }
