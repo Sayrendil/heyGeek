@@ -20,30 +20,30 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
         
         <!-- Animate.css -->
-        <link rel="stylesheet" href="/public/education/css/animate.css">
+        <link rel="stylesheet" href="/assets/css/animate.css">
         <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="/public/education/css/icomoon.css">
+        <link rel="stylesheet" href="/assets/css/icomoon.css">
         <!-- Bootstrap  -->
-        <link rel="stylesheet" href="/public/education/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="/public/education/css/magnific-popup.css">
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css">
 
         <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="/public/education/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/public/education/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
 
         <!-- Flexslider  -->
-        <link rel="stylesheet" href="/public/education/css/flexslider.css">
+        <link rel="stylesheet" href="/assets/css/flexslider.css">
 
         <!-- Pricing -->
-        <link rel="stylesheet" href="/public/education/css/pricing.css">
+        <link rel="stylesheet" href="/assets/css/pricing.css">
 
         <!-- Theme style  -->
-        <link rel="stylesheet" href="/public/education/css/style.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
 
         <!-- Modernizr JS -->
-        <script src="/public/education/js/modernizr-2.6.2.min.js"></script>
+        <script src="/assets/js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
 
@@ -74,6 +74,27 @@
                                 <div id="fh5co-logo"><a href="/"><i class="icon-study"></i> HeyGeek<span>.</span></a></div>
                             </div>
                             <div class="col-xs-10 text-right menu-1">
+                                <?php if(isset($_SESSION['user']['id'])): ?>
+                                <ul>
+                                    <li class="active"><a href="/">Главная</a></li>
+                                    <li><a href="/course/courses">Курсы</a></li>
+                                    <li><a href="/course/teachers">Учителя</a></li>
+                                    <li><a href="about">О нас</a></li>
+                                    <li><a href="/messages/chat">Чат</a></li>
+                                    <li class="has-dropdown">
+                                        <a href="blog.html">Новости</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Веб дизайн</a></li>
+                                            <li><a href="#">Front-End</a></li>
+                                            <li><a href="#">Back-End</a></li>
+                                            <li><a href="#">Full Stack</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact">Контакты</a></li>
+                                    <li class="btn-cta"><a href="/account/profile"><span>Профиль</span></a></li>
+                                    <li class="btn-cta"><a href="/account/logout"><span>Выход</span></a></li>
+                                </ul>
+                                <?php else: ?>
                                 <ul>
                                     <li class="active"><a href="/">Главная</a></li>
                                     <li><a href="/course/courses">Курсы</a></li>
@@ -93,6 +114,7 @@
                                     <li class="btn-cta"><a href="/account/login"><span>Войти</span></a></li>
                                     <li class="btn-cta"><a href="/account/register"><span>Создать аккаунт</span></a></li>
                                 </ul>
+                                <?php endif ?>
                             </div>
                         </div>
                         
@@ -104,7 +126,7 @@
                     echo $content;
                 ?>
 
-            <footer id="fh5co-footer" role="contentinfo" style="background-image: url(/public/education/images/img_bg_4.jpg);">
+            <footer id="fh5co-footer" role="contentinfo" style="background-image: url(/assets/images/img_bg_4.jpg);">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row row-pb-md">
@@ -175,28 +197,28 @@
         </div>
 
         <!-- jQuery -->
-        <script src="/public/education/js/jquery.min.js"></script>
+        <script src="/assets/js/jquery.min.js"></script>
         <!-- jQuery Easing -->
-        <script src="/public/education/js/jquery.easing.1.3.js"></script>
+        <script src="/assets/js/jquery.easing.1.3.js"></script>
         <!-- Bootstrap -->
-        <script src="/public/education/js/bootstrap.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
         <!-- Waypoints -->
-        <script src="/public/education/js/jquery.waypoints.min.js"></script>
+        <script src="/assets/js/jquery.waypoints.min.js"></script>
         <!-- Stellar Parallax -->
-        <script src="/public/education/js/jquery.stellar.min.js"></script>
+        <script src="/assets/js/jquery.stellar.min.js"></script>
         <!-- Carousel -->
-        <script src="/public/education/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/owl.carousel.min.js"></script>
         <!-- Flexslider -->
-        <script src="/public/education/js/jquery.flexslider-min.js"></script>
+        <script src="/assets/js/jquery.flexslider-min.js"></script>
         <!-- countTo -->
-        <script src="/public/education/js/jquery.countTo.js"></script>
+        <script src="/assets/js/jquery.countTo.js"></script>
         <!-- Magnific Popup -->
-        <script src="/public/education/js/jquery.magnific-popup.min.js"></script>
-        <script src="/public/education/js/magnific-popup-options.js"></script>
+        <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="/assets/js/magnific-popup-options.js"></script>
         <!-- Count Down -->
-        <script src="/public/education/js/simplyCountdown.js"></script>
+        <script src="/assets/js/simplyCountdown.js"></script>
         <!-- Main -->
-        <script src="/public/education/js/main.js"></script>
+        <script src="/assets/js/main.js"></script>
         <script>
             var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
@@ -215,6 +237,6 @@
                 enableUtc: false
             });
         </script>
-        <script src="/public/education/js/form.js"></script>
+        <script src="/assets/js/form.js"></script>
     </body>
 </html>

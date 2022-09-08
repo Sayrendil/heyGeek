@@ -27,6 +27,18 @@ return [
         'controller' => 'account',
         'action' => 'confirm'
     ],
+    'account/profile' => [
+        'controller' => 'account',
+        'action' => 'profile'
+    ],
+    'account/logout' => [
+        'controller' => 'account',
+        'action' => 'logout'
+    ],
+    'account/recovery' => [
+        'controller' => 'account',
+        'action' => 'recovery'
+    ],
     // NewsController Для страниц новостей
     'news/show' => [
         'controller' => 'news',

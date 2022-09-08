@@ -66,4 +66,58 @@ class AccountController extends Controller {
         $this->view->render('Вход');  
     }
 
+    // Профиль Пользователя
+
+    public function profileAction()
+    {
+
+        $this->view->render('Профиль');
+
+    }
+
+    public function logoutAction()
+    {
+
+        unset($_SESSION['user']);
+        $this->view->redirect('account/login');
+
+    }
+
+    // Восстановление пароля
+
+    public function recoveryAction() {
+        // debug($this->model->createToken());
+        if(!empty($_POST)) {
+
+            if(!$this->model->validate(['email'], $_POST)) {
+
+                $this->view->message('error', $this->model->error);
+
+            } elseif(!$this->model->checkStatus('login', $_POST['login'])) {
+
+                $this->view->message('error', $this->model->error);
+
+            } elseif(!$this->model->checkEmail($_POST['email'])) {
+
+                $this->view->message('error', $this->model->error);
+
+            } 
+            $this->model->recovery($_POST);
+            $this->view->message('success', 'Запрос на восстановление пароля отправлен на email!');
+        }
+        // $this->view->layout = 'custom';
+        $this->view->render('Восстановление пароля');   
+    }
+
+    public function resetAction() {
+        // $this->view->layout = 'custom';
+        
+        if(!$this->model->checkToken($this->route['token'])) {
+            $this->view->redirect('account/login');
+        }
+        $this->model->activate($this->route['token']);
+        $this->view->render('Регистрация завершена');   
+        
+    }
+
 }

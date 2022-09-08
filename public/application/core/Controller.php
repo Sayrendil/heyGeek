@@ -35,13 +35,16 @@ abstract class Controller {
     public function checkAcl() 
     {
         $this->acl = require 'application/acl/' . $this->route['controller'] . '.php';
-        if($this->is_acl('all')){
+        if ($this->is_acl('all')) {
             return true;
-        } elseif(isset($_SESSION['users']['id']) AND $this->is_acl('student')){
+        }
+        elseif (isset($_SESSION['user']['id']) and $this->is_acl('student')) {
             return true;
-        } elseif(isset($_SESSION['users']['id']) AND $this->is_acl('teacher')){
+        }
+        elseif (!isset($_SESSION['user']['id']) and $this->is_acl('teacher')) {
             return true;
-        } elseif(isset($_SESSION['admin']['id']) AND $this->is_acl('admin')){
+        }
+        elseif (isset($_SESSION['admin']) and $this->is_acl('admin')) {
             return true;
         }
 

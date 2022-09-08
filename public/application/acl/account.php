@@ -7,10 +7,14 @@ return [
         'confirm'
     ],
     'student' => [
-        'confirm'
+        'profile',
+        'logout',
+        'recovery'
     ],
     'teacher' => [
-        'confirm'
+        'profile',
+        'logout',
+        'recovery'
     ],
     'admin' => [
         //

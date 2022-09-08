@@ -23,4 +23,5 @@ session_start();
 
 $router = new Router;
 $router->run();
+// debug($_SESSION['user']);
 // debug($router->run());

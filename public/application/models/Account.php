@@ -150,4 +150,11 @@ class Account extends Model {
 
     }
 
+    public function recovery($email)
+    {
+
+        
+
+    }
+
 }
