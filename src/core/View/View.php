@@ -21,13 +21,13 @@ class View {
     {   
 
         // extract($vars);
-        $path = '../application/views/' . $this->path . '.php';
+        $path = '../src/views/' . $this->path . '.php';
         // debug($path);
         if(file_exists($path)) {
             ob_start();
             require $path;
             $content = ob_get_clean();
-            require '../application/views/layouts/' . $this->layout . '.php';
+            require '../src/views/layouts/' . $this->layout . '.php';
         } else {
             echo "Вид не найден: " . $this->path;
         }
@@ -46,7 +46,7 @@ class View {
     {
         
         http_response_code($code);
-        $path = '../application/views/errors/' . $code . '.php';
+        $path = '../src/views/errors/' . $code . '.php';
         if(file_exists($path)) {
             require $path;
         }

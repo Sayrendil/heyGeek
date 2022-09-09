@@ -1,7 +1,7 @@
 <?php
 
-namespace application\core;
-use application\core\View\View;
+namespace src\core;
+use src\core\View\View;
 // require __DIR__ . '\View.php';
 
 abstract class Controller {

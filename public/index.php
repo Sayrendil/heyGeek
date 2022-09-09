@@ -1,13 +1,20 @@
 <?php
 
+namespace App;
+use App\Book\Book;
+
 // Подключение файла дебага для удобного развертывания переменныз
 // namespace application\core;
-require '../application/lib/Dev.php';
-require '../application/core/Router/Router.php';
+require_once '../vendor/autoload.php';
+
+require_once '../src/lib/Dev.php';
+require '../src/core/Router/Router.php';
 
 // используем use для подключения класса
 
-// use public\application\core\Router;
+$book = new Book();
+
+echo $book->path();
 
 // Подключаем автозагрузку классов для удобного подключения файлов
 
@@ -22,7 +29,7 @@ session_start();
 
 // Объявление нового класса
 
-$router = new Router;
+$router = new \Router;
 $router->run();
 // debug($_SESSION['user']);
 // debug($router->run());

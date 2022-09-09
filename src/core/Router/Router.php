@@ -2,7 +2,7 @@
 
 // namespace application\core\Router;
 // use application\core\View;
-require '../application/core/View/View.php';
+require '../src/core/View/View.php';
 
 class Router {
 
@@ -14,7 +14,7 @@ class Router {
     function __construct()
     {
         
-        $arr = require '../application/config/routes.php';
+        $arr = require '../src/config/routes.php';
         // debug($arr);
         foreach($arr as $key => $value) {
             // debug($value);
@@ -63,11 +63,11 @@ class Router {
     {
         if($this->match() == true) {
             // $dir = substr(__DIR__, );
-            $path = '../application/controllers/' . ucfirst($this->params['controller']) .'Controller.php';
+            $path = '../src/controllers/' . ucfirst($this->params['controller']) .'Controller.php';
             // debug($path);
             if(file_exists($path)) {
                 $action = $this->params['action'] . 'Action';
-                $class_methods = '\application\controllers\\' . ucfirst($this->params['controller']) .'Controller';
+                $class_methods = '\src\controllers\\' . ucfirst($this->params['controller']) .'Controller';
                 if(method_exists($class_methods, $action)) {
                     $controller = new $path($this->params);
                     // debug($controller);

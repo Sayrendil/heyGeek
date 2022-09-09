@@ -1,7 +1,7 @@
 <?php
 
-namespace application\models;
-use application\core\Model;
+namespace src\models;
+use src\core\Model;
 
 class Main extends Model {
 

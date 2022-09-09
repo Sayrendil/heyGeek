@@ -1,0 +1,22 @@
+{
+    "name": "heygeek/app",
+    "description": "Web Portal",
+    "autoload": {
+        "psr-4": {
+            "Heygeek\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sayrendil",
+            "email": "daniyarsigaev@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
