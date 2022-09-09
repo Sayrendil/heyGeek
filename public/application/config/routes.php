@@ -39,6 +39,10 @@ return [
         'controller' => 'account',
         'action' => 'recovery'
     ],
+    'account/reset/{token:\w+}' => [
+        'controller' => 'account',
+        'action' => 'reset'
+    ],
     // NewsController Для страниц новостей
     'news/show' => [
         'controller' => 'news',
@@ -48,6 +52,6 @@ return [
     'course/courses' => [
         'controller' => 'course',
         'action' => 'courses'
-    ]
+    ],
 
 ];

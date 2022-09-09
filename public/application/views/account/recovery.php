@@ -9,18 +9,17 @@
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="email">Email</label> -->
-								<input type="text" id="login" name="login" class="form-control" placeholder="Ваш ЛОгин">
+								<input type="email" id="email" name="email" class="form-control" placeholder="Ваш Email">
 							</div>
 						</div>
-
 						<div class="row form-group">
 							<div class="col-md-12">
-								<!-- <label for="subject">Subject</label> -->
-								<input type="password" id="password" name="password" class="form-control" placeholder="Пароль">
+								<!-- <label for="email">Email</label> -->
+								<input type="password" id="password" name="password" class="form-control" placeholder="Новый пароль">
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Войти" class="btn btn-primary">
+							<input type="submit" value="Отправить" class="btn btn-primary">
 						</div>
 
 					</form>		

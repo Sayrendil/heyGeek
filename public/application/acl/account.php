@@ -9,12 +9,14 @@ return [
     'student' => [
         'profile',
         'logout',
-        'recovery'
+        'recovery',
+        'reset'
     ],
     'teacher' => [
         'profile',
         'logout',
-        'recovery'
+        'recovery',
+        'reset'
     ],
     'admin' => [
         //

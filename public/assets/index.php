@@ -1,12 +1,13 @@
 <?php
 
 // Подключение файла дебага для удобного развертывания переменныз
-
-require 'application/lib/Dev.php';
+// namespace application\core;
+require '../application/lib/Dev.php';
+require '../application/core/Router/Router.php';
 
 // используем use для подключения класса
 
-use application\core\Router;
+// use public\application\core\Router;
 
 // Подключаем автозагрузку классов для удобного подключения файлов
 

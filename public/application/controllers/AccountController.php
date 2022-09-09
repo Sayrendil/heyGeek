@@ -27,6 +27,7 @@ class AccountController extends Controller {
         }
         // $this->view->layout = 'custom';
         $this->view->render('Регистрация');   
+        
     }
 
     public function confirmAction() {
@@ -93,15 +94,15 @@ class AccountController extends Controller {
 
                 $this->view->message('error', $this->model->error);
 
-            } elseif(!$this->model->checkStatus('login', $_POST['login'])) {
+            } elseif($this->model->checkEmail($_POST['email'])) {
+
+                $this->view->message('error', 'Пользователь не найден');
+
+            } elseif(!$this->model->checkStatus('email', $_POST['email'])) {
 
                 $this->view->message('error', $this->model->error);
 
-            } elseif(!$this->model->checkEmail($_POST['email'])) {
-
-                $this->view->message('error', $this->model->error);
-
-            } 
+            }
             $this->model->recovery($_POST);
             $this->view->message('success', 'Запрос на восстановление пароля отправлен на email!');
         }
@@ -113,10 +114,10 @@ class AccountController extends Controller {
         // $this->view->layout = 'custom';
         
         if(!$this->model->checkToken($this->route['token'])) {
-            $this->view->redirect('account/login');
+            $this->view->redirect('account/recovery');
         }
-        $this->model->activate($this->route['token']);
-        $this->view->render('Регистрация завершена');   
+        $this->model->reset($this->route['token']);
+        $this->view->render('Пароль успешно сброшен!');   
         
     }
 

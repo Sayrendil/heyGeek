@@ -133,7 +133,7 @@ class Account extends Model {
             $type => $data
         ];
 
-        $status = $this->db->column("SELECT status FROM users WHERE login = '$data'");
+        $status = $this->db->column("SELECT status FROM users WHERE ". $type ." = '$data'");
         if($status != 1) {
             $this->error = 'Аккаунт ожидает подтверждения по email';
             return false;
@@ -153,8 +153,22 @@ class Account extends Model {
     public function recovery($email)
     {
 
-        
+        $token = $this->createToken();
 
+        $email = $email['email'];
+
+        $this->db->query("UPDATE users SET token = '$token' WHERE email = '$email';");
+    
+        mail($email, 'Recovery', 'Recovery Password: http://heyGeek/account/reset/'.$token);
+
+    }
+
+    public function reset($token, $password)
+    {
+
+        $password = password_hash($password, PASSWORD_BCRYPT);
+
+        $this->db->query("UPDATE users SET `status` = 1, `token` = '', `password` = '$password' WHERE `token` = '$token'");
     }
 
 }
