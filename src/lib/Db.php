@@ -1,6 +1,6 @@
 <?php
 
-namespace src\lib;
+namespace App\lib;
 use PDO, PDOException;
 
 class Db {

@@ -1,7 +1,7 @@
 <?php
 
-namespace src\core;
-use src\core\View\View;
+namespace App\core;
+use App\core\View;
 // require __DIR__ . '\View.php';
 
 abstract class Controller {
@@ -14,9 +14,9 @@ abstract class Controller {
     {
         $this->route = $route;
         if(!$this->checkAcl()) {
-            \View::errorCode(403);
+            View::errorCode(403);
         }
-        $this->view = new \View($route);
+        $this->view = new View($route);
         $this->model = $this->loadModel($route['controller']);
 
         // debug($this->model);
@@ -25,7 +25,7 @@ abstract class Controller {
     public function loadModel($name) 
     {
 
-        $path = '\application\models\\' . ucfirst($name);
+        $path = dirname(__DIR__) . '\models\\' . ucfirst($name);
         // debug($path);
 
         if(class_exists($path)) {
@@ -36,7 +36,7 @@ abstract class Controller {
 
     public function checkAcl() 
     {
-        $this->acl = require '../application/acl/' . $this->route['controller'] . '.php';
+        $this->acl = require '../src/acl/' . $this->route['controller'] . '.php';
         // $debug($this->acl);
         if ($this->is_acl('all')) {
             return true;

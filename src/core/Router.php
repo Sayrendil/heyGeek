@@ -1,8 +1,11 @@
 <?php
 
-// namespace application\core\Router;
-// use application\core\View;
-require '../src/core/View/View.php';
+namespace App\core;
+use App\core\View;
+use App\core\Controller;
+use Directory;
+
+// require '../src/core/View/View.php';
 
 class Router {
 
@@ -14,7 +17,7 @@ class Router {
     function __construct()
     {
         
-        $arr = require '../src/config/routes.php';
+        $arr = require dirname(__DIR__) . '/config/routes.php';
         // debug($arr);
         foreach($arr as $key => $value) {
             // debug($value);
@@ -28,6 +31,7 @@ class Router {
         
         $route = preg_replace('/{([a-z]+):([^\}]+)}/', '(?P<\1>\2)', $route);
         $route = '#^'.$route.'$#';
+        // debug($route);
         $this->routes[$route] = $params;
 
     }
@@ -62,21 +66,18 @@ class Router {
     public function run() 
     {
         if($this->match() == true) {
-            // $dir = substr(__DIR__, );
-            $path = '../src/controllers/' . ucfirst($this->params['controller']) .'Controller.php';
+            $path = 'App\controllers\\'. ucfirst($this->params['controller']) .'Controller';
             // debug($path);
-            if(file_exists($path)) {
+            if(class_exists($path)) {
                 $action = $this->params['action'] . 'Action';
-                $class_methods = '\src\controllers\\' . ucfirst($this->params['controller']) .'Controller';
-                if(method_exists($class_methods, $action)) {
+                if(method_exists($path, $action)) {
                     $controller = new $path($this->params);
-                    // debug($controller);
                     $controller->$action();
                 } else {
                     View::errorCode(404);
                 }
             } else {
-                View::errorCode(404);
+                View::errorCode(403);
             }
         } else{
             View::errorCode(404);

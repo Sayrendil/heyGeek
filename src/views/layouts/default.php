@@ -20,30 +20,31 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
         
         <!-- Animate.css -->
-        <link rel="stylesheet" href="/assets/css/animate.css">
+        <link rel="stylesheet" href="/public/css/animate.css">
         <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="/assets/css/icomoon.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="/public/css/icomoon.css">
         <!-- Bootstrap  -->
-        <link rel="stylesheet" href="/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="/public/css/bootstrap.css">
 
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="/public/css/magnific-popup.css">
 
         <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/public/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/public/css/owl.theme.default.min.css">
 
         <!-- Flexslider  -->
-        <link rel="stylesheet" href="/assets/css/flexslider.css">
+        <link rel="stylesheet" href="/public/css/flexslider.css">
 
         <!-- Pricing -->
-        <link rel="stylesheet" href="/assets/css/pricing.css">
+        <link rel="stylesheet" href="/public/css/pricing.css">
 
         <!-- Theme style  -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/public/css/style.css">
 
         <!-- Modernizr JS -->
-        <script src="/assets/js/modernizr-2.6.2.min.js"></script>
+        <script src="/public/js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
 
@@ -197,28 +198,28 @@
         </div>
 
         <!-- jQuery -->
-        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/public/js/jquery.min.js"></script>
         <!-- jQuery Easing -->
-        <script src="/assets/js/jquery.easing.1.3.js"></script>
+        <script src="/public/js/jquery.easing.1.3.js"></script>
         <!-- Bootstrap -->
-        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/public/js/bootstrap.min.js"></script>
         <!-- Waypoints -->
-        <script src="/assets/js/jquery.waypoints.min.js"></script>
+        <script src="/public/js/jquery.waypoints.min.js"></script>
         <!-- Stellar Parallax -->
-        <script src="/assets/js/jquery.stellar.min.js"></script>
+        <script src="/public/js/jquery.stellar.min.js"></script>
         <!-- Carousel -->
-        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/public/js/owl.carousel.min.js"></script>
         <!-- Flexslider -->
-        <script src="/assets/js/jquery.flexslider-min.js"></script>
+        <script src="/public/js/jquery.flexslider-min.js"></script>
         <!-- countTo -->
-        <script src="/assets/js/jquery.countTo.js"></script>
+        <script src="/public/js/jquery.countTo.js"></script>
         <!-- Magnific Popup -->
-        <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="/assets/js/magnific-popup-options.js"></script>
+        <script src="/public/js/jquery.magnific-popup.min.js"></script>
+        <script src="/public/js/magnific-popup-options.js"></script>
         <!-- Count Down -->
-        <script src="/assets/js/simplyCountdown.js"></script>
+        <script src="/public/js/simplyCountdown.js"></script>
         <!-- Main -->
-        <script src="/assets/js/main.js"></script>
+        <script src="/public/js/main.js"></script>
         <script>
             var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
@@ -237,6 +238,6 @@
                 enableUtc: false
             });
         </script>
-        <script src="/assets/js/form.js"></script>
+        <script src="/public/js/form.js"></script>
     </body>
 </html>

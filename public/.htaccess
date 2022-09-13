@@ -1,6 +1,9 @@
-AddDefaultCharset utf-8
+RewriteEngine On
 
-RewriteEngine on
+RewriteRule public/css/([^\/]+).css$ css/$1.css [L]
+RewriteRule public/js/([^\/]+).js$ js/$1.js [L]
+RewriteRule public/images/([^\/]+).jpg$ images/$1.jpg [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]

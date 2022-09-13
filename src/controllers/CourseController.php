@@ -1,7 +1,7 @@
 <?php
 
-namespace src\controllers;
-use src\core\Controller;
+namespace App\controllers;
+use App\core\Controller;
 
 class CourseController extends Controller {
 

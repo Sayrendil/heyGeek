@@ -3,7 +3,7 @@
         'name' => 'heygeek/app',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'becd800673b352ca6ffa9237a3512c0196526008',
+        'reference' => '6548f2645610a4f8fa480eabd1abe06967feb92e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'heygeek/app' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'becd800673b352ca6ffa9237a3512c0196526008',
+            'reference' => '6548f2645610a4f8fa480eabd1abe06967feb92e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
