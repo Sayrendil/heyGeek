@@ -8,8 +8,8 @@ class AccountController extends Controller {
     public function registerAction() {
         // debug($this->model->createToken());
         if(!empty($_POST)) {
-
-            if(!$this->model->validate(['login', 'email', 'password', 'phone', 'age'], $_POST)) {
+            // debug($this->model);
+            if(!$this->model->validate(['login', 'email', 'password', 'phone'], $_POST)) {
 
                 $this->view->message('error', $this->model->error);
 

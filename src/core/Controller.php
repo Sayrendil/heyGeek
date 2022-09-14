@@ -25,10 +25,10 @@ abstract class Controller {
     public function loadModel($name) 
     {
 
-        $path = dirname(__DIR__) . '\models\\' . ucfirst($name);
-        // debug($path);
+        $path = 'App\models\\' . ucfirst($name);
 
         if(class_exists($path)) {
+            // debug($path);
             return new $path;
         }
 

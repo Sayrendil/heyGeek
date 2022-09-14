@@ -1,7 +1,7 @@
 <?php
 
-namespace src\models;
-use src\core\Model;
+namespace App\models;
+use App\core\Model;
 
 class Account extends Model {
 

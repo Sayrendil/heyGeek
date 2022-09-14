@@ -43,12 +43,7 @@ return [
         'controller' => 'account',
         'action' => 'reset'
     ],
-    // NewsController Для страниц новостей
-    'news/show' => [
-        'controller' => 'news',
-        'action' => 'show'
-    ],
-    // CourseController для страниц курсов
+    // CourseController Для страниц новостей
     'course/courses' => [
         'controller' => 'course',
         'action' => 'courses'
