@@ -20,31 +20,31 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
         
         <!-- Animate.css -->
-        <link rel="stylesheet" href="/public/css/animate.css">
+        <link rel="stylesheet" href="/css/animate.css">
         <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="/public/css/style.css">
-        <link rel="stylesheet" href="/public/css/icomoon.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/icomoon.css">
         <!-- Bootstrap  -->
-        <link rel="stylesheet" href="/public/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
 
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="/public/css/magnific-popup.css">
+        <link rel="stylesheet" href="/css/magnific-popup.css">
 
         <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="/public/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/public/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/css/owl.theme.default.min.css">
 
         <!-- Flexslider  -->
-        <link rel="stylesheet" href="/public/css/flexslider.css">
+        <link rel="stylesheet" href="/css/flexslider.css">
 
         <!-- Pricing -->
-        <link rel="stylesheet" href="/public/css/pricing.css">
+        <link rel="stylesheet" href="/css/pricing.css">
 
         <!-- Theme style  -->
-        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
 
         <!-- Modernizr JS -->
-        <script src="/public/js/modernizr-2.6.2.min.js"></script>
+        <script src="/js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
 
@@ -127,7 +127,7 @@
                     echo $content;
                 ?>
 
-            <footer id="fh5co-footer" role="contentinfo" style="background-image: url(/assets/images/img_bg_4.jpg);">
+            <footer id="fh5co-footer" role="contentinfo" style="background-image: url(/images/img_bg_4.jpg);">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row row-pb-md">
@@ -198,28 +198,28 @@
         </div>
 
         <!-- jQuery -->
-        <script src="/public/js/jquery.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
         <!-- jQuery Easing -->
-        <script src="/public/js/jquery.easing.1.3.js"></script>
+        <script src="/js/jquery.easing.1.3.js"></script>
         <!-- Bootstrap -->
-        <script src="/public/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
         <!-- Waypoints -->
-        <script src="/public/js/jquery.waypoints.min.js"></script>
+        <script src="/js/jquery.waypoints.min.js"></script>
         <!-- Stellar Parallax -->
-        <script src="/public/js/jquery.stellar.min.js"></script>
+        <script src="/js/jquery.stellar.min.js"></script>
         <!-- Carousel -->
-        <script src="/public/js/owl.carousel.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
         <!-- Flexslider -->
-        <script src="/public/js/jquery.flexslider-min.js"></script>
+        <script src="/js/jquery.flexslider-min.js"></script>
         <!-- countTo -->
-        <script src="/public/js/jquery.countTo.js"></script>
+        <script src="/js/jquery.countTo.js"></script>
         <!-- Magnific Popup -->
-        <script src="/public/js/jquery.magnific-popup.min.js"></script>
-        <script src="/public/js/magnific-popup-options.js"></script>
+        <script src="/js/jquery.magnific-popup.min.js"></script>
+        <script src="/js/magnific-popup-options.js"></script>
         <!-- Count Down -->
-        <script src="/public/js/simplyCountdown.js"></script>
+        <script src="/js/simplyCountdown.js"></script>
         <!-- Main -->
-        <script src="/public/js/main.js"></script>
+        <script src="/js/main.js"></script>
         <script>
             var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
@@ -238,6 +238,6 @@
                 enableUtc: false
             });
         </script>
-        <script src="/public/js/form.js"></script>
+        <script src="/js/form.js"></script>
     </body>
 </html>

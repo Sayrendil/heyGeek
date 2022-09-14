@@ -1,7 +1,7 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(public/education/images/img_bg_1.jpg);">
+		   	<li style="background-image: url(/images/img_bg_1.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -15,7 +15,7 @@
 			   		</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(public/education/images/img_bg_2.jpg);">
+		   	<li style="background-image: url(/images/img_bg_2.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -29,7 +29,7 @@
 			   		</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(public/education/images/img_bg_3.jpg);">
+		   	<li style="background-image: url(/images/img_bg_3.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -191,7 +191,7 @@
 			<div class="row">
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(public/education/images/project-1.jpg);">
+						<a href="#" class="course-img" style="background-image: url(/images/project-1.jpg);">
 						</a>
 						<div class="desc">
 							<h3><a href="#">Web Master</a></h3>
@@ -202,7 +202,7 @@
 				</div>
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(public/education/images/project-2.jpg);">
+						<a href="#" class="course-img" style="background-image: url(/images/project-2.jpg);">
 						</a>
 						<div class="desc">
 							<h3><a href="#">Business &amp; Accounting</a></h3>
@@ -213,7 +213,7 @@
 				</div>
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(public/education/images/project-3.jpg);">
+						<a href="#" class="course-img" style="background-image: url(/images/project-3.jpg);">
 						</a>
 						<div class="desc">
 							<h3><a href="#">Science &amp; Technology</a></h3>
@@ -224,7 +224,7 @@
 				</div>
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(public/education/images/project-4.jpg);">
+						<a href="#" class="course-img" style="background-image: url(/images/project-4.jpg);">
 						</a>
 						<div class="desc">
 							<h3><a href="#">Health &amp; Psychology</a></h3>
@@ -237,7 +237,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-testimonial" style="background-image: url(public/education/images/school.jpg);">
+	<div id="fh5co-testimonial" style="background-image: url(/images/school.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -251,7 +251,7 @@
 						<div class="owl-carousel owl-carousel-fullwidth">
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(public/education/images/person1.jpg);"></div>
+									<div class="user" style="background-image: url(/images/person1.jpg);"></div>
 									<span>Mary Walker<br><small>Students</small></span>
 									<blockquote>
 										<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -260,7 +260,7 @@
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(public/education/images/person2.jpg);"></div>
+									<div class="user" style="background-image: url(/images/person2.jpg);"></div>
 									<span>Mike Smith<br><small>Students</small></span>
 									<blockquote>
 										<p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -269,7 +269,7 @@
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(public/education/images/person3.jpg);"></div>
+									<div class="user" style="background-image: url(/images/person3.jpg);"></div>
 									<span>Rita Jones<br><small>Teacher</small></span>
 									<blockquote>
 										<p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -320,7 +320,7 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(public/education/images/project-1.jpg);"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url(/images/project-1.jpg);"></a>
 						<div class="blog-text">
 							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
 							<span class="posted_on">March. 15th</span>
@@ -331,7 +331,7 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(public/education/images/project-2.jpg);"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url(/images/project-2.jpg);"></a>
 						<div class="blog-text">
 							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
 							<span class="posted_on">March. 15th</span>
@@ -342,7 +342,7 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(public/education/images/project-3.jpg);"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url(/images/project-3.jpg);"></a>
 						<div class="blog-text">
 							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
 							<span class="posted_on">March. 15th</span>
@@ -457,7 +457,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-register" style="background-image: url(public/education/images/img_bg_2.jpg);">
+	<div id="fh5co-register" style="background-image: url(/images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 animate-box">
@@ -478,16 +478,16 @@
 		</div>
 		<div class="row">
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url(public/education/images/project-5.jpg);"></a>
+				<a href="#" class="gallery" style="background-image: url(/images/project-5.jpg);"></a>
 			</div>
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url(public/education/mages/project-2.jpg);"></a>
+				<a href="#" class="gallery" style="background-image: url(/mages/project-2.jpg);"></a>
 			</div>
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url(public/education/images/project-3.jpg);"></a>
+				<a href="#" class="gallery" style="background-image: url(/images/project-3.jpg);"></a>
 			</div>
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url(public/education/images/project-4.jpg);"></a>
+				<a href="#" class="gallery" style="background-image: url(/images/project-4.jpg);"></a>
 			</div>
 		</div>
 	</div>
