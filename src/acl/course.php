@@ -4,7 +4,8 @@ return [
     'all' => [
         'login',
         'register',
-        'confirm'
+        'confirm',
+        'courses'
     ],
     'student' => [
         'profile',

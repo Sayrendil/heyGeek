@@ -57,7 +57,7 @@
                         <div class="row">
                             <div class="col-xs-12 text-right">
                                 <p class="site">www.heygeek.com</p>
-                                <p class="num">Call: +01 123 456 7890</p>
+                                <p class="num">Call: +7 708 159 6010</p>
                                 <ul class="fh5co-social">
                                     <li><a href="#"><i class="icon-facebook2"></i></a></li>
                                     <li><a href="#"><i class="icon-twitter2"></i></a></li>
@@ -79,16 +79,14 @@
                                 <ul>
                                     <li class="active"><a href="/">Главная</a></li>
                                     <li><a href="/course/courses">Курсы</a></li>
-                                    <li><a href="/course/teachers">Учителя</a></li>
                                     <li><a href="about">О нас</a></li>
-                                    <li><a href="/messages/chat">Чат</a></li>
                                     <li class="has-dropdown">
-                                        <a href="blog.html">Новости</a>
+                                        <a href="#" disabled>Учебный портал</a>
                                         <ul class="dropdown">
-                                            <li><a href="#">Веб дизайн</a></li>
-                                            <li><a href="#">Front-End</a></li>
-                                            <li><a href="#">Back-End</a></li>
-                                            <li><a href="#">Full Stack</a></li>
+                                            <li><a href="/dashboard/course">Активные курсы</a></li>
+                                            <li><a href="#">Уроки</a></li>
+                                            <li><a href="#">Чат</a></li>
+                                            <li><a href="#">Уроки</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact">Контакты</a></li>
@@ -99,18 +97,7 @@
                                 <ul>
                                     <li class="active"><a href="/">Главная</a></li>
                                     <li><a href="/course/courses">Курсы</a></li>
-                                    <li><a href="/course/teachers">Учителя</a></li>
                                     <li><a href="about">О нас</a></li>
-                                    <li><a href="/messages/chat">Чат</a></li>
-                                    <li class="has-dropdown">
-                                        <a href="blog.html">Новости</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Веб дизайн</a></li>
-                                            <li><a href="#">Front-End</a></li>
-                                            <li><a href="#">Back-End</a></li>
-                                            <li><a href="#">Full Stack</a></li>
-                                        </ul>
-                                    </li>
                                     <li><a href="contact">Контакты</a></li>
                                     <li class="btn-cta"><a href="/account/login"><span>Войти</span></a></li>
                                     <li class="btn-cta"><a href="/account/register"><span>Создать аккаунт</span></a></li>

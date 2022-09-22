@@ -14,6 +14,23 @@ return [
         'controller' => 'main',
         'action' => 'contact'
     ],
+    // DashboardController для страницы учебной панели
+    'dashboard/course' => [
+        'controller' => 'dashboard',
+        'action' => 'course'
+    ],
+    'dashboard/course/{id:\d+}' => [
+        'controller' => 'dashboard',
+        'action' => 'course'
+    ],
+    'dashboard/lessons' => [
+        'controller' => 'dashboard',
+        'action' => 'lessons'
+    ],
+    'dashboard/lessons/{id:\d+}' => [
+        'controller' => 'dashboard',
+        'action' => 'lessons'
+    ],
     // AccountController Для страниц входа
     'account/login' => [
         'controller' => 'account',
@@ -47,6 +64,10 @@ return [
     'course/courses' => [
         'controller' => 'course',
         'action' => 'courses'
+    ],
+    'course/confirm/{token:\w+}' => [
+        'controller' => 'course',
+        'action' => 'confirm'
     ],
 
 ];

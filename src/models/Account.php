@@ -20,8 +20,8 @@ class Account extends Model {
             ],
 
             'password' => [
-                'pattern' => '#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,14}$#',
-                'message' => 'Пароль является обязательным полем (Разрешены только латинские буквы и цифры от 8 - 14 символов)'
+                'pattern' => '#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8, }$#',
+                'message' => 'Пароль является обязательным полем (Разрешены только латинские буквы и цифры от 3 - 14 символов)'
             ],
 
             'phone' => [
@@ -54,11 +54,7 @@ class Account extends Model {
     public function checkEmail($email) 
     {
 
-        if($this->db->column("SELECT id FROM users WHERE email = '$email'")){
-            $this->error = 'Этот Email уже используется';
-            return false;
-        }
-        return true;
+        return $this->db->column("SELECT id FROM users WHERE email = '$email'");
 
     }
 

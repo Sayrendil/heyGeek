@@ -7,24 +7,21 @@ class AccountController extends Controller {
 
     public function registerAction() {
         // debug($this->model->createToken());
-        if(!empty($_POST)) {
-            // debug($this->model);
-            if(!$this->model->validate(['login', 'email', 'password', 'phone'], $_POST)) {
-
-                $this->view->message('error', $this->model->error);
-
-            } elseif(!$this->model->checkEmail($_POST['email'])) {
-
-                $this->view->message('error', $this->model->error);
-
-            } elseif(!$this->model->checkLogin($_POST['login'])) {
-
-                $this->view->message('error', $this->model->error);
-
-            } 
-            $this->model->register($_POST);
-            $this->view->message('success', 'Регистрация заверешена подтвердите свой email!');
-        }
+    
+        if (!empty($_POST)) {
+            // debug($_POST['password']);
+			if (!$this->model->validate(['email', 'login', 'password', 'phone'], $_POST)) {
+				$this->view->message('error', $this->model->error);
+			}
+			elseif ($this->model->checkEmail($_POST['email'])) {
+				$this->view->message('error', 'Этот E-mail уже используется');
+			}
+			elseif (!$this->model->checkLogin($_POST['login'])) {
+				$this->view->message('error', $this->model->error);
+			}
+			$this->model->register($_POST);
+			$this->view->message('success', 'Регистрация завершена, подтвердите свой E-mail');
+		}
         // $this->view->layout = 'custom';
         $this->view->render('Регистрация');   
         
@@ -72,6 +69,29 @@ class AccountController extends Controller {
     public function profileAction()
     {
 
+        if(!empty($_POST)) {
+            
+            if(!$this->model->validate(['email', 'phone'], $_POST)) {
+                $this->view->message('error', $this->model->error);
+            } 
+
+            $id = $this->model->checkEmail($_POST['email']);
+
+            if($id and $id != $_SESSION['user']['id']) {
+                $this->view->message('error', "Этот Email уже используеться");
+            }
+
+            if(!empty($_POST['password']) and !$this->model->validate(['password'], $_POST['password'])) {
+                debug($_POST['password']);
+                $this->view->message('error', $this->model->error);
+            }
+
+            $this->view->message('success', "ok");
+            // $this->view->message('success', $id);
+
+
+        }
+
         $this->view->render('Профиль');
 
     }
@@ -94,7 +114,7 @@ class AccountController extends Controller {
 
                 $this->view->message('error', $this->model->error);
 
-            } elseif($this->model->checkEmail($_POST['email'])) {
+            } elseif(!$this->model->checkEmail($_POST['email'])) {
 
                 $this->view->message('error', 'Пользователь не найден');
 
