@@ -103,8 +103,27 @@ class Account extends Model {
         $status = 0;
 
         $this->db->query("INSERT INTO `users` VALUES (NULL, '$login', '$age', '$gender', '$phone', '$email', '$password', '$token', '$created_at', '$status');");
-    
-        mail($email, 'Register', 'Confirm: http://heyGeek/account/confirm/'.$token);
+        
+        $mail = new PHPMailer();
+
+        // Settings
+        $mail->IsSMTP();
+        $mail->CharSet = 'UTF-8';
+
+        $mail->Host       = "smtp.gmail.com";    // SMTP server example
+        $mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
+        $mail->SMTPAuth   = true;                  // enable SMTP authentication
+        $mail->Port       = 465;                    // set the SMTP port for the GMAIL server
+        $mail->Username   = "daniyarsigaev@gmail.com";            // SMTP account username example
+        $mail->Password   = "GTS3850!@#";            // SMTP account password example
+
+        // Content
+        $mail->isHTML(true);                       // Set email format to HTML
+        $mail->Subject = 'Register';
+        $mail->Body    = 'Confirm: http://heyGeek/account/confirm/<b>'.$token . '</b>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+        $mail->send();
 
     }
 
