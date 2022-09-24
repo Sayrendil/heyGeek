@@ -2,6 +2,9 @@
 
 namespace App\models;
 use App\core\Model;
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 class Account extends Model {
 
@@ -101,29 +104,59 @@ class Account extends Model {
         $token = $this->createToken();
         $password = password_hash($post['password'], PASSWORD_BCRYPT);
         $status = 0;
+        $role = 1;
 
-        $this->db->query("INSERT INTO `users` VALUES (NULL, '$login', '$age', '$gender', '$phone', '$email', '$password', '$token', '$created_at', '$status');");
+        $this->db->query("INSERT INTO `users` VALUES (NULL, '$login', '$age', '$gender', '$phone', '$email', '$password', '$token', '$created_at', '$status', '$role');");
         
-        $mail = new PHPMailer();
+        $mail = new \App\PHPMailer();
 
-        // Settings
-        $mail->IsSMTP();
-        $mail->CharSet = 'UTF-8';
+        try {
+            $mail->isSMTP();   
+            $mail->CharSet = "UTF-8";
+            $mail->SMTPAuth   = true;
+            //$mail->SMTPDebug = 2;
+            $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-        $mail->Host       = "smtp.gmail.com";    // SMTP server example
-        $mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
-        $mail->SMTPAuth   = true;                  // enable SMTP authentication
-        $mail->Port       = 465;                    // set the SMTP port for the GMAIL server
-        $mail->Username   = "daniyarsigaev@gmail.com";            // SMTP account username example
-        $mail->Password   = "GTS3850!@#";            // SMTP account password example
+            // Настройки вашей почты
+            $mail->Host       = 'smtp.google.com'; // SMTP сервера вашей почты
+            $mail->Username   = 'daniyarsigaev@gmail.com'; // Логин на почте
+            $mail->Password   = 'GTS3850!@#'; // Пароль на почте
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port       = 465;
+            $mail->setFrom('mail@heyGeek.kz', 'HeyGeek'); // Адрес самой почты и имя отправителя
 
-        // Content
-        $mail->isHTML(true);                       // Set email format to HTML
+            // Получатель письма
+            $mail->addAddress($email);  
+            $mail->addAddress('daniyarsigaev@gmail.com'); // Ещё один, если нужен
+
+            // Прикрипление файлов к письму
+        if (!empty($file['name'][0])) {
+            for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+                $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+                $filename = $file['name'][$ct];
+                if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+                    $mail->addAttachment($uploadfile, $filename);
+                    $rfile[] = "Файл $filename прикреплён";
+                } else {
+                    $rfile[] = "Не удалось прикрепить файл $filename";
+                }
+            }   
+        }
+        // Отправка сообщения
+        $mail->isHTML(true); 
+        $mail->title = 'Регистрация на сайте heyGeek.kz';
         $mail->Subject = 'Register';
-        $mail->Body    = 'Confirm: http://heyGeek/account/confirm/<b>'.$token . '</b>';
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->body    = 'Confirm: http://heyGeek/account/confirm/<b>'.$token . '</b>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; 
 
-        $mail->send();
+        // Проверяем отравленность сообщения
+        if ($mail->send()) {$result = "success";} 
+        else {$result = "error";}
+
+        } catch (Exception $e) {
+            $result = "error";
+            $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+        }
 
     }
 
