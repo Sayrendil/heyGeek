@@ -18,14 +18,14 @@ class Course extends Model {
     public function checkToken($token) 
     {
 
-        return $this->db->column("SELECT id FROM active_course WHERE token = '$token'");
+        return $this->db->column("SELECT id FROM active_courses WHERE token = '$token'");
 
     }
 
     public function activate($token) 
     {
 
-        $this->db->query("UPDATE active_course SET status = 1, token = '' WHERE token = '$token'");
+        $this->db->query("UPDATE active_courses SET status = 1, token = '' WHERE token = '$token'");
 
     }
 
@@ -38,7 +38,7 @@ class Course extends Model {
         $status_learn = 0;
         $status = 0;
 
-        $this->db->query("INSERT INTO `active_course` VALUES (NULL, '$course_id', '$user_id', '$status', '$status_learn', '$token', '$created_at');");
+        $this->db->query("INSERT INTO `active_courses` VALUES (NULL, '$course_id', '$user_id', '$status', '$status_learn', '$token', '$created_at');");
     
         mail($_SESSION['user']['email'], 'Запись на курс на сайте heyGeek.kz', 'Подтвердите запись: http://heyGeek/course/confirm/'.$token);
 

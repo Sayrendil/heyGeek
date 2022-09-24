@@ -10,7 +10,7 @@ class DashboardController extends Controller {
         
         $vars = $this->model->getActiveCourse();
 
-        debug($vars);
+        // debug($vars);
 
         $this->view->render('Действующие курсы', $vars);
 
@@ -20,6 +20,13 @@ class DashboardController extends Controller {
     {
 
         $this->view->render('Уроки');
+
+    }
+
+    public function course_teachAction()
+    {
+
+        $this->view->render('Управление курсом');
 
     }
 

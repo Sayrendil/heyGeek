@@ -19,17 +19,25 @@ return [
         'controller' => 'dashboard',
         'action' => 'course'
     ],
-    'dashboard/course/{id:\d+}' => [
-        'controller' => 'dashboard',
-        'action' => 'course'
-    ],
     'dashboard/lessons' => [
         'controller' => 'dashboard',
         'action' => 'lessons'
     ],
-    'dashboard/lessons/{id:\d+}' => [
+    'dashboard/grades' => [
         'controller' => 'dashboard',
-        'action' => 'lessons'
+        'action' => 'grades'
+    ],
+    'dashboard/course_teach' => [
+        'controller' => 'dashboard',
+        'action' => 'course_teach'
+    ],
+    'dashboard/lessons_teach' => [
+        'controller' => 'dashboard',
+        'action' => 'lessons_teach'
+    ],
+    'dashboard/users_teach' => [
+        'controller' => 'dashboard',
+        'action' => 'users_teach'
     ],
     // AccountController Для страниц входа
     'account/login' => [

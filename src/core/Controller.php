@@ -41,13 +41,13 @@ abstract class Controller {
         if ($this->is_acl('all')) {
             return true;
         }
-        elseif (isset($_SESSION['user']['id']) and $this->is_acl('student')) {
+        elseif (isset($_SESSION['user']['id']) and $this->is_acl('student') and $_SESSION['user']['role'] == 1) {
             return true;
         }
-        elseif (isset($_SESSION['user']['id']) and $this->is_acl('teacher')) {
+        elseif (isset($_SESSION['user']['id']) and $this->is_acl('teacher') and $_SESSION['user']['role'] == 2) {
             return true;
         }
-        elseif (isset($_SESSION['admin']) and $this->is_acl('admin')) {
+        elseif (isset($_SESSION['admin']) and $this->is_acl('admin') and $_SESSION['user']['role'] == 3) {
             return true;
         }
 

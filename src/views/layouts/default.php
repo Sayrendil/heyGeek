@@ -75,7 +75,7 @@
                                 <div id="fh5co-logo"><a href="/"><i class="icon-study"></i> HeyGeek<span>.</span></a></div>
                             </div>
                             <div class="col-xs-10 text-right menu-1">
-                                <?php if(isset($_SESSION['user']['id'])): ?>
+                                <?php if(isset($_SESSION['user']['id']) && $_SESSION['user']['role'] == 1): ?>
                                 <ul>
                                     <li class="active"><a href="/">Главная</a></li>
                                     <li><a href="/course/courses">Курсы</a></li>
@@ -84,9 +84,25 @@
                                         <a href="#" disabled>Учебный портал</a>
                                         <ul class="dropdown">
                                             <li><a href="/dashboard/course">Активные курсы</a></li>
-                                            <li><a href="#">Уроки</a></li>
-                                            <li><a href="#">Чат</a></li>
-                                            <li><a href="#">Уроки</a></li>
+                                            <li><a href="/dashboard/grades">Оценки</a></li>
+                                            <li><a href="dashboard/chats">Чат</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact">Контакты</a></li>
+                                    <li class="btn-cta"><a href="/account/profile"><span>Профиль</span></a></li>
+                                    <li class="btn-cta"><a href="/account/logout"><span>Выход</span></a></li>
+                                </ul>
+                                <?php elseif(isset($_SESSION['user']['id']) && $_SESSION['user']['role'] == 2): ?>
+                                <ul>
+                                    <li class="active"><a href="/">Главная</a></li>
+                                    <li><a href="/course/courses">Курсы</a></li>
+                                    <li><a href="about">О нас</a></li>
+                                    <li class="has-dropdown">
+                                        <a href="#" disabled>Учебный портал</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/dashboard/course_teach">Мои курсы</a></li>
+                                            <li><a href="/dashboard/users_teach">Ученики</a></li>
+                                            <li><a href="dashboard/chats">Чат</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact">Контакты</a></li>

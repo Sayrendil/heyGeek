@@ -10,7 +10,10 @@ return [
     ],
     'teacher' => [
         'course',
-        'lessons'
+        'lessons',
+        'course_teach',
+        'lessons_teach',
+        'users_teach'
     ],
     'admin' => [
         //
